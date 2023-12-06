@@ -68,17 +68,17 @@ locals {
 }
 
 module "ocp_base" {
-  source                 = "../.."
-  ibmcloud_api_key       = var.ibmcloud_api_key
-  resource_group_id      = module.resource_group.resource_group_id
-  region                 = var.region
-  tags                   = var.resource_tags
-  cluster_name           = var.prefix
-  force_delete_storage   = true
-  vpc_id                 = ibm_is_vpc.vpc.id
-  vpc_subnets            = local.cluster_vpc_subnets
-  ocp_version            = var.ocp_version
-  worker_pools           = local.worker_pools
-  access_tags            = var.access_tags
-  enable_registry_backup = false
+  source                  = "../.."
+  ibmcloud_api_key        = var.ibmcloud_api_key
+  resource_group_id       = module.resource_group.resource_group_id
+  region                  = var.region
+  tags                    = var.resource_tags
+  cluster_name            = var.prefix
+  force_delete_storage    = true
+  vpc_id                  = ibm_is_vpc.vpc.id
+  vpc_subnets             = local.cluster_vpc_subnets
+  ocp_version             = var.ocp_version
+  worker_pools            = local.worker_pools
+  access_tags             = var.access_tags
+  enable_registry_storage = false
 }
