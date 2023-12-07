@@ -80,5 +80,5 @@ module "ocp_base" {
   ocp_version             = var.ocp_version
   worker_pools            = local.worker_pools
   access_tags             = var.access_tags
-  enable_registry_storage = false
+  enable_registry_storage = var.enable_registry_storage
 }

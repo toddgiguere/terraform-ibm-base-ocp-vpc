@@ -47,3 +47,9 @@ variable "access_tags" {
   description = "A list of access tags to apply to the resources created by the module."
   default     = []
 }
+
+variable "enable_registry_storage" {
+  type        = bool
+  description = "Enable storage of the OpenShift internal registry to a standard Cloud Object Storage bucket (recommended)"
+  default     = true
+}
